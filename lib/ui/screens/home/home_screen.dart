@@ -1,4 +1,4 @@
-import 'package:flubank/ui/shared/constants.dart';
+import 'package:flubank/ui/screens/home/widgets/saldo.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,23 +12,12 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Inicio'),
       ),
-      body: Container(
-        width: double.infinity,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('FluBank'),
-            RaisedButton(
-              color: AppColors.mainColor,
-              child: Text(
-                'Cerrar cesión',
-                style: TextStyle(color: Colors.white),
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
+            SizedBox(height: 20),
+            UserSaldoCard(),
           ],
         ),
       ),
